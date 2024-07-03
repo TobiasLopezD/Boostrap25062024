@@ -30,7 +30,4 @@ let Apellido = "Lopez Douglas"
 let Edad = 29
 let Direccion = " Urbanizacion vista alegre, Escazu"
 
-console.log(Nombre);
-console.log(Apellido);
-console.log(Edad);
-console.log(Direccion);
+console.log("Hola mi nombre es: "+Nombre+" Y mis apellidos son "+Apellido+" mi edad es "+Edad+" vivo en "+Direccion+"");
