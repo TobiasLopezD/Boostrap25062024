@@ -26,7 +26,7 @@ let Edad = 29
 let TieneMascotas = true 
 let TieneGatos = false 
 //  arreglo, array es una lista de variables [X, Y, Z] permite ingresar varios valores
-let Frutas = ["Manzana", "Pera", "Uva"] 
+let Frutas = ["Manzana", "Pera", "Uva"] ;
 
 // Objeto {} permite representar datos de la vida real ejemplo auto, casa, videojuego
 let PersonaTobias = {
