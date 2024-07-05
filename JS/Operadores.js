@@ -96,3 +96,5 @@ if ( edad >= 18) {
 } else {
     alert( "No es mayor de edad")
 }
+
+
