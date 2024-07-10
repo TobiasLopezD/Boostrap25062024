@@ -28,6 +28,7 @@ console.log (Mensaje)
 // DivResultado.style.backgroundColor = "blue"
 
 let TextResultado = document.getElementById ("text")
+console.log (TextResultado)
 TextResultado.textContent = "Contenido de texto"
 TextResultado.style.backgroundColor = "Green"
 TextResultado.style.color = "Yellow"
