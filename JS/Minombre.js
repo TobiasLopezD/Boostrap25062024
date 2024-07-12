@@ -6,7 +6,8 @@
 
 console.log ("Funcionando")
 
-function Guardar() {
+function Guardar(event) {
+    event.preventDefault();
     const formulario = document.getElementById ("formulario");
     const valor1 = document.getElementById ("valor1").value;
     const valor2 = document.getElementById ("valor2").value;
