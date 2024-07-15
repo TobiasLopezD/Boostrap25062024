@@ -24,6 +24,15 @@
         alert ("aaa")
     })
 
+    //Evento de pasar el mouse por encima
+  // Evento de pasar el ratón por encima
+    document.getElementById("miDiv").addEventListener("mouseover", function() {
+            this.style.backgroundColor = "yellow";
+    });
+
+document.getElementById("miDiv").addEventListener("mouseout", function() {
+            this.style.backgroundColor = "green";
+        });
 
 
     // function saludar () {
