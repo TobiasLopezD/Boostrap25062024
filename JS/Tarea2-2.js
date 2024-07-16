@@ -2,36 +2,37 @@ console.log ("Funcionando")
 
 function calcularIMC(event) {
     event.preventDefault();
-    const resultado = document.getElementById ("resultado");  
-    const SolicitudDePeso = document.getElementById ("SolicitudDePeso");
-    const peso = document.getElementById ("peso").value;
-    const altura = document.getElementById ("altura").value;
+    let resultado = document.getElementById ("resultado");  
+    let SolicitudDePeso = document.getElementById ("SolicitudDePeso");
+    let peso = document.getElementById ("peso").value;
+    let altura = document.getElementById ("altura").value;
 
-    const imc = peso / (altura *  altura)
-    console.log("Su IMC es: " + Math.round (imc));
+    let imc = peso / (altura *  altura)
+    let clasificar = ""
     
+    switch (true) {
+        case (imc<  18.5):
+                clasificar = "Bajo peso"
+            break;
+        case (imc >= 18.5 && imc < 25):
+                clasificar = "Peso normal"
+            break;
+                
+        case (imc >= 25 && imc < 29.9):
+                clasificar = "sobrepeso"
+            break;
+                
+        case (imc >= 30):
+                clasificar = "Obeso"
+            break;
+    
+        default:
+            clasificar = " no se puedo clasificar"
+    }    
+
+
+    resultado.textContent = `Su peso es:  ${peso}kg , y su altura es: ${altura}cm. Estas clasificado como: ${clasificar}`
     
 
 
-clasificar (imc) 
-function clasificar(imc) {    
-    if (imc <= 18.5 ) {
-        console.log ("Bajo de Peso");
-    } 
-    else if (imc <=24.9){
-        console.log ("Peso normal");
-    }
-    else if (imc <= 29.9){
-        console.log ( "Sobre peso");
-    } else if (imc >=30 ) {
-        console.log( "Obesidad") ; 
-
-    } else {
-        return "Nutricionsita de inmediato" ;
-    }
-    
-    
-    
-
-}
 }
