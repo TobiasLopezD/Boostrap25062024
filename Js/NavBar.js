@@ -41,10 +41,12 @@ function Mostar_NavBar () {
         {
             Nombre : "Pagina de Mercadeo",
             Ruta: " #"
-        }
+        },
     
 
     ]
+
+    //Bucles o Ciclos
     console.log (ListadoMenu)
     let Contenedor = document.getElementById('V_NavBar')
 
