@@ -1,8 +1,55 @@
 console.log("funcionando")
 
 
-let contenido  = `
-     <a class="navbar-brand" href="#">Navbar</a>
+///Componente NavBar
+
+Mostar_NavBar ();
+
+// Let COntenedor =  ID
+//let Contenido = "Hola mundo"
+//Contenedor.innerHTML = Contenido
+function Mostar_NavBar () {
+    // let Opcion1 = "Inicio";
+    // let Opcion2 = "Listado de Productos";
+    // let Opcion3 = "Crear Producto";
+    // let Opcion4 = "Pagina de Mercadeo";
+    // let Menu = {
+    //     Nombre : "Inicio",
+    //     Ruta: " Index.html"
+    // }
+
+    //Arreglo de objetos [{},{},{}]
+    
+
+    let ListadoMenu =[
+        {
+            Nombre : "Inicio",
+            Ruta: " Index.html"
+            
+        },
+    
+        {
+            Nombre : "Listado de Productos",
+            Ruta: "List-Products.html"
+        },
+
+        {
+            Nombre : "Crear Producto",
+            Ruta: "New-Product.html"
+        },
+
+        {
+            Nombre : "Pagina de Mercadeo",
+            Ruta: " #"
+        }
+    
+
+    ]
+    console.log (ListadoMenu)
+    let Contenedor = document.getElementById('V_NavBar')
+
+    let PLantilla  = `
+    <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -11,13 +58,17 @@ let contenido  = `
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="Index.html">Inicio <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="${ListadoMenu[0].Ruta}">${ListadoMenu[0].Nombre} <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="List-Products.html">Listado de Productos</a>
+                        <a class="nav-link" href="${ListadoMenu[1].Ruta}">${ListadoMenu[1].Nombre}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="New-Product.html">Crear Producto</a>
+                        <a class="nav-link" href=${ListadoMenu[2].Ruta}>${ListadoMenu[2].Nombre}</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="${ListadoMenu[3].Ruta}">${ListadoMenu[3].Nombre}</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -39,18 +90,7 @@ let contenido  = `
             </div>
 
 `
-console.log(contenido)
-
-Navegacion ();
-saludar ();
-
-function Navegacion () {
-    let V_NavBar = document.getElementById('V_NavBar')
-    debugger
-    V_NavBar.innerHTML = contenido
+Contenedor.innerHTML = PLantilla
 
 }
 
-function saludar() {
-    
-}
