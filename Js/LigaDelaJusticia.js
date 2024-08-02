@@ -52,7 +52,7 @@ function Mostrar_LigaDeLaJusticia(Heroes) { //Firma
         <div class = "col-lg-4 mb-4"">
             <div class="card h-100" >
                 <img class="card-img-top" src="${element.img}" alt="">
-                <div class="card-body">
+                <div class="card-body text-center"">
                     <h4 class="card-title">${element.nombre}</h4>
                     <p class="card-text">${element.bio}</p>
                     <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block">Ver mas </button>
@@ -67,5 +67,20 @@ function Mostrar_LigaDeLaJusticia(Heroes) { //Firma
     console.log(Heroes)
 }
 
+document.addEventListener ('Keyup', e => {
+  if (e.target.matches('#botonBuscar')) {
+    document.querySelectorAll ('.contenedorHeroes').forEach(lista => {
+      lista.textContent.toLocaleLowerCase ().includes (e.target.value)
+      ? lista.classList.remove ('filtro')
+      : lista.classList.add ('filtro');
+
+    })
+
+
+  }
+
+})
+
+// no pude realizar lo del boton buscar 
 //JSON 
 //String 
